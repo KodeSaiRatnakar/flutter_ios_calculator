@@ -135,7 +135,7 @@ class CalculatorState extends State<Calculator> {
         height! - width! - width! / 5.0 + PADDING, fontSize32 + PADDING);
 
     return Scaffold(
-      backgroundColor: Colors.transparent,
+      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       resizeToAvoidBottomInset: false,
       body: Stack(fit: StackFit.expand, children: [
         Container(
@@ -339,10 +339,12 @@ class CalculatorKey extends StatelessWidget {
             onPressed: onPress as void Function()?,
             child: Container(
               decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  border: Border(
-                      top: BorderSide(color: new Color(0xFF777777)),
-                      right: BorderSide(color: new Color(0xFF666666)))),
+                color: Colors.transparent,
+                border: Border(
+                    // top: BorderSide(color: new Color(0xFF777777)),
+                    // right: BorderSide(color: new Color(0xFF666666)),
+                    ),
+              ),
               child: Center(
                 child: Padding(
                   padding: EdgeInsets.only(right: isZeroKey ? width! / 4 : 0),

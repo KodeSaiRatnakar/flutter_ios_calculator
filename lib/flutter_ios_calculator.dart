@@ -11,9 +11,10 @@ class Calculator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return calculatorType == null || calculatorType == CalculatorType.ios12 ?
-        Calculator12.Calculator() : Calculator10.Calculator();
+    return calculatorType == CalculatorType.ios12
+        ? Calculator12.Calculator()
+        : Calculator10.Calculator();
   }
 }
 
-enum CalculatorType{ios10, ios12}
+enum CalculatorType { ios10, ios12 }
